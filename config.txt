@@ -1,3 +1,3 @@
 installer=lffofficewordinstaller.py
-installeddirpath=/home/{username}/.local/share/applications/LFF-Office/LFF-Word
-installedfilepath=/home/{username}/.local/share/applications/LFF-Office-Word.desktop
+installeddirpath=/usr/local/share/applications/LFF-Office/LFF-Word
+installedfilepath=/usr/local/share/applications/LFF-Office-Word.desktop
