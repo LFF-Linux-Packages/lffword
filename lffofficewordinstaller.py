@@ -10,11 +10,8 @@ def search_files(directory, extension):
                 files.append(os.path.join(root, filename))
     return files
 
-# Get the username of the account
-username = getpass.getuser()
-
 # Directory to search within
-directory_to_search = f'/home/{username}'
+directory_to_search = f'/etc/lff-linux'
 
 # Search for lffofficeword.py files
 lffword_python = search_files(directory_to_search, 'lffofficeword.py')
@@ -24,15 +21,15 @@ def create_desktop_entry():
     desktop_entry = f'''[Desktop Entry]
 Type=Application
 Name=LFF Office Word
-Exec=/usr/bin/python3 /home/{username}/.local/share/applications/LFF-Office/LFF-Word/lffofficeword.py
+Exec=/usr/bin/python3 /usr/local/share/applications/LFF-Office/LFF-Word/lffofficeword.py
 Terminal=false
-Icon=/home/{username}/.local/share/applications/LFF-Office/LFF-Word/lffofficeword.png
+Icon=/usr/local/share/applications/LFF-Office/LFF-Word/lffofficeword.png
 Categories=Office;
 '''
 
     # Specify the path and filename for the desktop entry file
-    desktop_entry_file = f'/home/{username}/.local/share/applications/LFF-Office-Word.desktop'
-    destination_dir = f'/home/{username}/.local/share/applications/LFF-Office/LFF-Word/'
+    desktop_entry_file = f'/usr/local/share/applications/LFF-Office-Word.desktop'
+    destination_dir = f'/usr/local/share/applications/LFF-Office/LFF-Word/'
 
     # Create the necessary directories
     os.makedirs(destination_dir, exist_ok=True)
